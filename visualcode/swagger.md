@@ -5,3 +5,4 @@ When an endpoint returns a simple { ok: true } or { deleted: true }, create tiny
 For list endpoints, convert raw arrays to { items, pagination } in the controller itself (derive a simple count-based pagination object) before returning; this ensures both Swagger and runtime stay consistent with the global ResponseEnvelopeInterceptor.
 Keep public/consumer controllers (github, projects, instances, etc.) using @ApiTags('private'|'public'), and don’t forget internal ones—they require the same decorators so Swagger shows complete coverage.
 After decorating, run npm run build to ensure the Nest compiler picks up the DTOs (they must be referenced/imported to avoid tree-shaking).
+

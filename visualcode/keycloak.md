@@ -1,0 +1,1 @@
+Update the guard so KEYCLOAK_AUDIENCE can now be a comma-separated list of acceptable audiences. During verification we only add the audience constraint when the env var is set, and we feed jose either a single value or an array;
