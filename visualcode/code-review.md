@@ -1,0 +1,1 @@
+I want you to review my full code, structure and refactor what is needed to improve the code. I don't like fallbacks, legacy code, normalizations, trash on my code, repeated code, etc.

@@ -3,6 +3,5 @@ Use shared decorators from swagger.decorators.ts: @ApiDataResponse(MyDto) for si
 Back every response with a DTO that mirrors the exact shape the handler returns (e.g., ProjectViewDto, MountViewDto, GithubRepositoryListDto, BridgeTicketDto). Annotate fields with @ApiProperty (enum links, nullable flags, example values) and place DTOs under the module’s dto/ folder to keep things organized.
 When an endpoint returns a simple { ok: true } or { deleted: true }, create tiny DTOs (OkResponseDto, ProjectDeletedResponseDto) instead of inline schemas so they can be reused.
 For list endpoints, convert raw arrays to { items, pagination } in the controller itself (derive a simple count-based pagination object) before returning; this ensures both Swagger and runtime stay consistent with the global ResponseEnvelopeInterceptor.
-Keep public/consumer controllers (github, projects, instances, etc.) using @ApiTags('private'|'public'), and don’t forget internal ones—they require the same decorators so Swagger shows complete coverage.
-After decorating, run npm run build to ensure the Nest compiler picks up the DTOs (they must be referenced/imported to avoid tree-shaking).
-
+Use @ApiTags to categorize the different endpoints
+Create the requests, response dto's for query or body requests too. So that we have a complete openapi.json
