@@ -1,0 +1,1 @@
+I don't care with backward compatiblity, or legacy code. I just want a clean code without boilerplate and trash code related to old versions. Update my plan. Then you will implement all tasks of this plan and while doing it, update the plan with CHECK on the tasks that during your implementation completes so that i can see the progress.
