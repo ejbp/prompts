@@ -1,0 +1,1 @@
+you will update icons, favicons , oggs, sharing messages and all references to loveable and will replace by what makes sense on this website.
